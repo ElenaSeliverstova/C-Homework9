@@ -7,7 +7,7 @@ int numM = int.Parse(Console.ReadLine());
 Console.Write("Введите N: ");
 int numN = int.Parse(Console.ReadLine());
 
-int Ack(int m, int n)
+int Akkerman(int m, int n)
 {
     if (m == 0)
     {
@@ -15,16 +15,16 @@ int Ack(int m, int n)
     }
     else if (n == 0)
     {
-        return Ack(m - 1, 1);
+        return Akkerman(m - 1, 1);
     }
     else
     {
-        return Ack(m - 1, Ack(m, n - 1));
+        return Akkerman(m - 1, Akkerman(m, n - 1));
     }
 
 }
 
-Console.Write(Ack(numM, numN));
+Console.Write(Akkerman(numM, numN));
 
 
 
